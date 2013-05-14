@@ -19,6 +19,7 @@ module_name: PerlX::ArraySkip
 name: PerlX-ArraySkip
 no_index:
   directory:
+    - examples
     - inc
     - t
     - xt
@@ -28,5 +29,5 @@ resources:
   bugtracker: http://rt.cpan.org/Dist/Display.html?Queue=PerlX-ArraySkip
   homepage: https://metacpan.org/release/PerlX-ArraySkip
   license: http://creativecommons.org/publicdomain/zero/1.0/
-  repository: https://bitbucket.org/tobyink/p5-perlx-arrayskip
-version: 0.001
+  repository: https://github.com/tobyink/p5-perlx-arrayskip
+version: 0.002
