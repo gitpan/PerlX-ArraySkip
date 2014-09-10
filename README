@@ -15,18 +15,18 @@ SYNOPSIS
             print join '', @list;   # prints 'ace'
 
 DESCRIPTION
-    The "arrayskip" function returns the entire list it was passed as
-    arguments, except the first. This is an entirely trivial function and
-    can be written as:
+    The `arrayskip` function returns the entire list it was passed as
+    arguments, except the first. This is an entirely trivial function and can
+    be written as:
 
             sub arrayskip { shift; @_ }
 
-    The principle of TIMTOWTDI says that there are other ways of skipping
-    the first item in an array, but according to my benchmarking this
-    performs best.
+    The principle of TIMTOWTDI says that there are other ways of skipping the
+    first item in an array, but according to my benchmarking this performs
+    best.
 
-    A good question is: why would you want to do this? Well, in Perl there
-    are two common function calling patterns, named parameters:
+    A good question is: why would you want to do this? Well, in Perl there are
+    two common function calling patterns, named parameters:
 
             give(
                     giver     => $alice,
@@ -38,17 +38,17 @@ DESCRIPTION
 
             give($alice, $bob, $dinosaur);
 
-    Positional parameters look fine when you've got one or two arguments,
-    but can start looking unwieldly with four or more. Let's imagine that
-    our "give" function takes a hypothetical fourth parameter, a boolean
+    Positional parameters look fine when you've got one or two arguments, but
+    can start looking unwieldly with four or more. Let's imagine that our
+    `give` function takes a hypothetical fourth parameter, a boolean
     indicating whether the gift had wrapping paper on:
 
             give($alice, $bob, $dinosaur, 1);
 
     When we come back to that line a few weeks, we might be confused about
-    what it means. Is Bob giving Alice to the dinosaur once? The "arrayskip"
-    function allows you to add extra items into the parameter list which
-    will be skipped over, and can thus act as comments:
+    what it means. Is Bob giving Alice to the dinosaur once? The `arrayskip`
+    function allows you to add extra items into the parameter list which will
+    be skipped over, and can thus act as comments:
 
             give(
                     arrayskip 'giver',     $alice,
@@ -58,9 +58,9 @@ DESCRIPTION
             );
 
     Now let's use a couple of tricks to make it even clearer. Firstly,
-    PerlX::ArraySkip allows you to import the "arrayskip" function with your
-    choice of name. You can call it something more suitable to your use
-    case, such as "arg". Secondly, the fat comma.
+    PerlX::ArraySkip allows you to import the `arrayskip` function with your
+    choice of name. You can call it something more suitable to your use case,
+    such as `arg`. Secondly, the fat comma.
 
             use PerlX::ArraySkip 'arg';
         
@@ -76,7 +76,7 @@ DESCRIPTION
     readability, and the code's ease of maintenance.
 
     So, why should you use PerlX::ArraySkip instead of defining your own
-    "arrayskip" function? No reason at all. You can define your own function
+    `arrayskip` function? No reason at all. You can define your own function
     in fewer keystrokes than loading this module. Observe:
 
             use PerlX::ArraySkip 'skip';
@@ -89,15 +89,15 @@ DESCRIPTION
             sub arg { shift; @_ } # see PerlX::ArraySkip
 
   XS Backend
-    If you install PerlX::ArraySkip::XS, a faster XS-based implementation
-    will be used instead of the pure Perl function. My basic benchmarking
+    If you install PerlX::ArraySkip::XS, a faster XS-based implementation will
+    be used instead of the pure Perl function. My basic benchmarking
     experiments seem to show this to be around 55% faster.
 
-    Calling "PerlX::ArraySkip::IMPLEMENTATION" will return "PP" or "XS" to
+    Calling `PerlX::ArraySkip::IMPLEMENTATION` will return "PP" or "XS" to
     reveal the implementation currently in use.
 
   Environment
-    The environment variable "PERLX_ARRAYSKIP_IMPLEMENTATION" may be set to
+    The environment variable `PERLX_ARRAYSKIP_IMPLEMENTATION` may be set to
     "PP" to prevent the XS backend from loading.
 
 BUGS
