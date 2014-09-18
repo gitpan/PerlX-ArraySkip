@@ -7,7 +7,7 @@ my $meta = {
   "abstract"       => "sub { shift; \@_ }",
   "author"         => ["Toby Inkster (TOBYINK) <tobyink\@cpan.org>"],
   "dynamic_config" => 0,
-  "generated_by"   => "Moose::Meta::Class::__ANON__::SERIAL::6 version , CPAN::Meta::Converter version 2.140640",
+  "generated_by"   => "Dist::Inkt::Profile::TOBYINK version 0.023, CPAN::Meta::Converter version 2.140640",
   "keywords"       => [],
   "license"        => ["unrestricted"],
   "meta-spec"      => {
@@ -18,10 +18,11 @@ my $meta = {
   "no_index"       => { directory => ["eg", "examples", "inc", "t", "xt"] },
   "prereqs"        => {
                         configure => { requires => { "ExtUtils::MakeMaker" => 6.17 } },
+                        runtime => { requires => { perl => 5.002 } },
                         test => { requires => { "Test::More" => 0.61 } },
                       },
   "provides"       => {
-                        "PerlX::ArraySkip" => { file => "lib/PerlX/ArraySkip.pm", version => 0.003 },
+                        "PerlX::ArraySkip" => { file => "lib/PerlX/ArraySkip.pm", version => 0.004 },
                       },
   "release_status" => "stable",
   "resources"      => {
@@ -35,9 +36,9 @@ my $meta = {
                                           url  => "git://github.com/tobyink/p5-perlx-arrayskip.git",
                                           web  => "https://github.com/tobyink/p5-perlx-arrayskip",
                                         },
-                        X_identifier => "http://purl.org/NET/cpan-uri/dist/PerlX-ArraySkip/project",
+                        x_identifier => "http://purl.org/NET/cpan-uri/dist/PerlX-ArraySkip/project",
                       },
-  "version"        => 0.003,
+  "version"        => 0.004,
 };
 
 my %dynamic_config;

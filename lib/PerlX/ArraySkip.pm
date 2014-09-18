@@ -1,12 +1,13 @@
 package PerlX::ArraySkip;
 
-use 5.006;
-#use strict;
-#use warnings;
+my $_cpants = q/
+use strict;
+use warnings;
+#/;
 
 BEGIN {
 	$PerlX::ArraySkip::AUTHORITY = 'cpan:TOBYINK';
-	$PerlX::ArraySkip::VERSION   = '0.003';
+	$PerlX::ArraySkip::VERSION   = '0.004';
 }
 
 sub import
@@ -175,7 +176,7 @@ If you liked this, you might also like L<PerlX::Maybe>.
 
 Toby Inkster E<lt>tobyink@cpan.orgE<gt>.
 
-=head1 COPYRIGHT AND LICENCE
+=head1 LICENCE
 
 To the extent possible under law, Toby Inkster has waived all copyright and
 related or neighbouring rights to PerlX::ArraySkip. This work is published

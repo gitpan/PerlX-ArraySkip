@@ -7,7 +7,7 @@ build_requires:
 configure_requires:
   ExtUtils::MakeMaker: '6.17'
 dynamic_config: 0
-generated_by: 'Moose::Meta::Class::__ANON__::SERIAL::6 version , CPAN::Meta::Converter version 2.140640'
+generated_by: 'Dist::Inkt::Profile::TOBYINK version 0.023, CPAN::Meta::Converter version 2.140640'
 keywords: []
 license: unrestricted
 meta-spec:
@@ -25,11 +25,13 @@ optional_features: {}
 provides:
   PerlX::ArraySkip:
     file: lib/PerlX/ArraySkip.pm
-    version: '0.003'
+    version: '0.004'
+requires:
+  perl: '5.002'
 resources:
-  X_identifier: http://purl.org/NET/cpan-uri/dist/PerlX-ArraySkip/project
+  Identifier: http://purl.org/NET/cpan-uri/dist/PerlX-ArraySkip/project
   bugtracker: http://rt.cpan.org/Dist/Display.html?Queue=PerlX-ArraySkip
   homepage: https://metacpan.org/release/PerlX-ArraySkip
   license: http://creativecommons.org/publicdomain/zero/1.0/
   repository: git://github.com/tobyink/p5-perlx-arrayskip.git
-version: '0.003'
+version: '0.004'
